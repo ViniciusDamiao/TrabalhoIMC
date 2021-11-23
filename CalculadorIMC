@@ -8,15 +8,29 @@
 </style>
                         <style>
                           html, body {
-                          
+                          max-width: 100%;
+                          overflow: hidden !important;
+                          background-image: linear-gradient(to bottom right, 	                               #7a86f7, #b2b7f7);
+                          font-family: 'Roboto', sans-serif;
+                            font-weight: bold !important;
                           border-collapse: collapse;
                           width: 100%;
                       }
                           input{
                             width: 50px;
                           }
-                         
-                          
+                          a {
+                            text-decoration: none;
+                          }
+                          #testresul input{
+                            background: none;
+                            border: none;
+                            position: absolute;
+                            width: 150px;
+                            height: 25px;
+                            top: 71px;
+  							right: 55px;
+                          }
                           #formulario{
                             border: 1px solid #dddddd;
                             margin: 0px;
