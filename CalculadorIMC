@@ -25,7 +25,13 @@
                           fieldset{
                             border: 0;
                           }
-                          
+                          #botao{
+                            background-color: #FF7F00;
+                            text-align: center;
+                            padding: 8px;
+                            margin-top: 5px;
+                            text-decoration: none;
+                          }
                     table {
                       
                       border-collapse: collapse;
@@ -54,7 +60,7 @@
     		// o + na frente transforma em number a string	
     			
     		var kilos  		= +formulario.kilos.value;
-    		var metros 		= +formulario.metros.value;
+    		//var metros 		= +formulario.metros.value;
     		var centimetros = +formulario.centimetros.value;
           	var resultado;
     		
@@ -69,37 +75,31 @@
     		
     		if(imc < 20)
     		{
-    			
-			alert('Abaixo do peso');
+    			formulario.resul.value = 'Abaixo do peso';
     		} 
     		else if(imc >20 && imc <= 25)
     		{
-              		
-			alert('Peso ideal');
+              	formulario.resul.value = 'Peso ideal';
     		}
     		else if(imc >25 && imc <= 30)
     		{
-    			
-			alert('Levemente acima do peso');
+    			formulario.resul.value = 'Levemente acima do peso';
     		}
     		else if(imc >30 && imc <= 35)
     		{
-    			
-			alert('Obesidade Grau I');
+    			formulario.resul.value = 'Obesidade Grau I';
     		}
     		else if(imc >35 && imc <= 40)
     		{
-    			
-			alert('Obesidade Grau II');
+    			formulario.resul.value = 'Obesidade Grau II';
     		}
     		else if(imc >40)
     		{
-    			
-			alert('Obesidade Grau III');
+    			formulario.resul.value = 'Obesidade Grau III';
     		}
     		else
     		{
-    			alert('N/A');
+    			alert('Gordo');
     		}
     	}
     </script>
