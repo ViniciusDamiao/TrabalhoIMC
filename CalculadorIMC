@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <title>Calculo IMC</title>
+    <title>Calculo IMC</title> 		
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-</style>
+    @import url('https://fonts.googleapis.com/css2?		family=Roboto:wght@100&display=swap');
+    </style>
                         <style>
                           html, body {
                           max-width: 100%;
@@ -26,10 +26,10 @@
                             background: none;
                             border: none;
                             position: absolute;
-                            width: 150px;
+                            width: 160px;
                             height: 25px;
                             top: 71px;
-  							right: 55px;
+  							right: 47px;
                           }
                           #formulario{
                             border: 1px solid #dddddd;
@@ -123,7 +123,7 @@
       <fieldset>
           <legend>Cálculo IMC</legend>
 
-          <label for="kilos">KILOS:</label>
+          <label for="kilos">PESO EM KG:</label>
           <input name="kilos" type="text" />
 
          
