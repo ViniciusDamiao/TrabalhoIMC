@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Calculo IMC</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+</style>
+                        <style>
+                          html, body {
+                          
+                          border-collapse: collapse;
+                          width: 100%;
+                      }
+                          input{
+                            width: 50px;
+                          }
+                         
+                          
+                          #formulario{
+                            border: 1px solid #dddddd;
+                            margin: 0px;
+                            padding-top: 10px;
+                          }
+                          fieldset{
+                            border: 0;
+                          }
+                          
+                    table {
+                      
+                      border-collapse: collapse;
+                      width: 100%;
+                    }
+
+                    td, th {
+                      border: 1px solid #dddddd;
+                      text-align: left;
+                      padding: 8px;
+                    }
+
+                    tr:nth-child(even) {
+                      background-color: #dddddd;
+                    }
+                    </style>
+    <script type="text/javascript">
+    	
+        function calcular(){
+    		// pegando o id do formulario
+    		var formulario = document.getElementById("formulario");	
+    		
+    		// kilos é minha variavel
+    		// formulario é o id do meu formulario
+    		// value é o valor do input
+    		// o + na frente transforma em number a string	
+    			
+    		var kilos  		= +formulario.kilos.value;
+    		var metros 		= +formulario.metros.value;
+    		var centimetros = +formulario.centimetros.value;
+          	var resultado;
+    		
+     		// altura
+    		var altura =  centimetros / 100;
+    		 
+    		// imc
+    		var imc = kilos / (altura * altura);
+    		
+    		// o metodo toFixed fixa apenas duas casas decimais apos o ponto.
+    		formulario.imc.value = imc.toFixed(2);
+    		
+    		if(imc < 20)
+    		{
+    			
+			alert('Abaixo do peso');
+    		} 
+    		else if(imc >20 && imc <= 25)
+    		{
+              		
+			alert('Peso ideal');
+    		}
+    		else if(imc >25 && imc <= 30)
+    		{
+    			
+			alert('Levemente acima do peso');
+    		}
+    		else if(imc >30 && imc <= 35)
+    		{
+    			
+			alert('Obesidade Grau I');
+    		}
+    		else if(imc >35 && imc <= 40)
+    		{
+    			
+			alert('Obesidade Grau II');
+    		}
+    		else if(imc >40)
+    		{
+    			
+			alert('Obesidade Grau III');
+    		}
+    		else
+    		{
+    			alert('N/A');
+    		}
+    	}
+    </script>
+</head>
+<body>
+      <form id="formulario">
+      <fieldset>
+          <legend>Cálculo IMC</legend>
+
+          <label for="kilos">KILOS:</label>
+          <input name="kilos" type="text" />
+
+         
+
+          <label for="centimetros"><br>ALTURA EM CM:</label>
+          <input name="centimetros" type="text" />
+
+          <label for="imc"><br>IMC:</label>
+          <input name="imc" type="text" disabled="disabled" />
+        			<div id='testresul'>
+                      <input name="resul" type="text" disabled="disabled" />
+        			</div>
+                  
+
+          <a href="#" onclick="calcular();"><p id='botao'>CALCULAR</p></a>
+      </fieldset>
+      </form>
+  
+      <table border: 1px solid #dddddd;>
+  <tr border: 1px solid #dddddd;>
+    <th>IMC</th>
+    <th>Classificação</th>
+  </tr>
+  <tr>
+    <td>Abaixo de 18.5</td>
+    <td>Abaixo do peso</td>
+  </tr>
+  <tr>
+    <td>Entre 18.6 e 24.9</td>
+    <td>Peso ideal</td>
+  </tr>
+  <tr>
+    <td>Entre 25 e 29.9</td>
+    <td>Levemente acima do peso</td>
+  </tr>
+  <tr>
+    <td>Entre 30 e 34.9</td>
+    <td>Obesidade Grau I</td>
+  </tr>
+  <tr>
+    <td>Entre 35 e 39.9</td>
+    <td>Obesidade Grau II (Severa)</td>
+  </tr>
+  <tr>
+    <td>Acima de 40</td>
+    <td>Obesidade Grau III (Mórbida)</td>
+  </tr>
+</table>
+  					
+</body>
+</html>
