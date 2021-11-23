@@ -2,14 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <title>Calculo IMC</title>
+    <title>Calculo IMC</title> 		<!-- POR FAVOR NÃO MEXER GALERA DO GRUPO -->
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-</style>
+    @import url('https://fonts.googleapis.com/css2?		family=Roboto:wght@100&display=swap');
+    </style>
                         <style>
+                          ::-webkit-scrollbar{
+                            width:0px !important;
+                          }
+                          ::-webkit-scrollbar-track{
+                            background: none !important;
+                          }
                           html, body {
                           max-width: 100%;
-                          overflow: hidden !important;
+                          /*overflow: hidden !important;*/
                           background-image: linear-gradient(to bottom right, 	                               #7a86f7, #b2b7f7);
                           font-family: 'Roboto', sans-serif;
                             font-weight: bold !important;
@@ -26,10 +32,10 @@
                             background: none;
                             border: none;
                             position: absolute;
-                            width: 150px;
+                            width: 160px;
                             height: 25px;
                             top: 71px;
-  							right: 55px;
+  							right: 47px;
                           }
                           #formulario{
                             border: 1px solid #dddddd;
@@ -47,7 +53,6 @@
                             text-decoration: none;
                           }
                     table {
-                      
                       border-collapse: collapse;
                       width: 100%;
                     }
@@ -123,7 +128,7 @@
       <fieldset>
           <legend>Cálculo IMC</legend>
 
-          <label for="kilos">KILOS:</label>
+          <label for="kilos">PESO EM KG:</label>
           <input name="kilos" type="text" />
 
          
@@ -141,6 +146,9 @@
           <a href="#" onclick="calcular();"><p id='botao'>CALCULAR</p></a>
       </fieldset>
       </form>
+  <div>
+    
+  </div>
   
       <table border: 1px solid #dddddd;>
   <tr border: 1px solid #dddddd;>
